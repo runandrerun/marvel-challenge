@@ -1,5 +1,6 @@
 import React from 'react';
 import {Search} from '../../components';
+import {GifFrame} from '../../containers';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       Hey!
         <Search.Input placeholder="Hey"/>
       </Search>
+      <GifFrame />
     </section>
   );
 };
