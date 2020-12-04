@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import {Link as ReactRouterLink} from 'react-router-dom';
 
 export const Container = styled.div`
   display: flex;
@@ -30,8 +31,46 @@ export const Logo = styled.img`
   }
 `;
 
-export const ButtonLink = styled.div`
+export const Anchor = styled.a`
   font-size: 1.5rem;
   font-weight: 500;
   color: white;
+  position: relative;
+  border: none!important;
+  &:after {
+    position: absolute;
+    left: 50%;
+    content: '';
+    height: 1px;
+    background: white;
+    transition: all 0.5s ease-in;
+    width: 0;
+    bottom: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
+`;
+
+export const ButtonLink = styled(ReactRouterLink)`
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  &:after {
+    position: absolute;
+    left: 50%;
+  	content: '';
+  	height: 1px;
+    background: white;
+    transition: all 0.5s ease-in;
+    width: 0;
+    bottom: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
 `;

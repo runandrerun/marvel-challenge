@@ -4,6 +4,7 @@ import {GifFrame} from '../../containers';
 import {Container} from './Home.styles';
 import {fetchTrending} from '../../adapters';
 import logo from '../../_assets/img/pawprint.svg';
+import * as ROUTES from '../../constants/routes';
 
 export default function Home() {
   const [gifList, setGifList] = useState([]);
@@ -20,7 +21,10 @@ export default function Home() {
           src={logo}
           alt={"Pawprint"}
         />
-        <Header.ButtonLink>Visit DEV</Header.ButtonLink>
+        <>
+        {/*<Header.Anchor href={ROUTES.GITHUB} rel="noopener noreferrer">Visit Github</Header.Anchor>*/}
+        <Header.ButtonLink to={ROUTES.ABOUT}>About me</Header.ButtonLink>
+        </>
       </Header>
       <Search>
         <Search.Input placeholder={"Search for a gif"}/>
