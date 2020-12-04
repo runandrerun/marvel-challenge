@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
+  margin: 20px auto;
 `;
 
 export const Input = styled.input`
@@ -12,4 +12,6 @@ export const Input = styled.input`
   font-size: 1rem;
   font-weight: normal;
   padding: 1rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
 `;
