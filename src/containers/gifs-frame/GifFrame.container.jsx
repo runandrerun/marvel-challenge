@@ -1,24 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import {Container} from './GifFrame.styles';
 import {GifCard} from '../../components';
-import {fetchTrending} from '../../adapters';
 
-export default function GifFrame() {
-  const [gifList, setGifList] = useState([]);
-  useEffect(async () => {
-    const result = fetchTrending();
-    setGifList(result);
-    console.log("Gif List", gifList);
-  }, []);
+export default function GifFrame({ gifs }) {
   return (
-    <>
-      {gifList.length > 0 ?
-        gifList.map(gif => {
-          <GifCard>
-          {gif.type}
+    <Container>
+      {
+        gifs.map(({ id, bitly_gif_url, bitly_url, slug, title, url, rating, images, embed_url}) => {
+          return (
+          <GifCard key={id + slug}>
+            <GifCard.Image
+              src={images.downsized.url}
+            />
           </GifCard>
-        }) :
-        null
+          )
+        })
       }
-    </>
+    </Container>
   );
 };
