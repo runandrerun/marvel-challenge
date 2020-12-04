@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {Search} from '../../components';
+import {Search, Header} from '../../components';
 import {GifFrame} from '../../containers';
+import {Container} from './Home.styles';
 import {fetchTrending} from '../../adapters';
+import logo from '../../_assets/img/paw-print.svg';
 
 export default function Home() {
   const [gifList, setGifList] = useState([]);
@@ -12,13 +14,19 @@ export default function Home() {
     });
   }, []);
   return (
-    <section id="home">
+    <Container id="home">
+      <Header>
+        <Header.Logo
+          src={logo}
+        />
+        <Header.ButtonLink>Visit DEV</Header.ButtonLink>
+      </Header>
       <Search>
-        <Search.Input placeholder="Hey"/>
+        <Search.Input placeholder="Search for a gif"/>
       </Search>
       <GifFrame
         gifs={gifList}
       />
-    </section>
+    </Container>
   );
 };

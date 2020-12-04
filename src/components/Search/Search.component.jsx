@@ -20,7 +20,6 @@ Search.Input = function SearchInput({ ...restProps }) {
   return (
     <Input
       {...restProps}
-      placeholder={"Search"}
       value={searchTerm}
       onChange={handleChange}
     />
