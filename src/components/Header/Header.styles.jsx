@@ -1,9 +1,11 @@
 import styled from 'styled-components/macro';
+import {Link as ReactRouterLink} from 'react-router-dom';
 
 export const Container = styled.div`
   display: flex;
   margin: 0 56px;
-  height: 64px;
+  margin-top: 10px;
+  height: 80px;
   padding: 18px 0;
   justify-content: space-between;
   align-items: center;
@@ -19,18 +21,56 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   filter: brightness(0) invert(1);
-  width: 108px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   margin-right: 40px;
 
   @media (min-width: 1449px) {
-    width: 167px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
   }
 `;
 
-export const ButtonLink = styled.div`
+export const Anchor = styled.a`
   font-size: 1.5rem;
   font-weight: 500;
   color: white;
+  position: relative;
+  border: none!important;
+  &:after {
+    position: absolute;
+    left: 50%;
+    content: '';
+    height: 1px;
+    background: white;
+    transition: all 0.5s ease-in;
+    width: 0;
+    bottom: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
+`;
+
+export const ButtonLink = styled(ReactRouterLink)`
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  &:after {
+    position: absolute;
+    left: 50%;
+  	content: '';
+  	height: 1px;
+    background: white;
+    transition: all 0.5s ease-in;
+    width: 0;
+    bottom: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
 `;

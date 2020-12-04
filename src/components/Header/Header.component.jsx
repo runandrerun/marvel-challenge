@@ -1,5 +1,6 @@
 import React from 'react';
-import {Container, Logo, ButtonLink} from './Header.styles';
+import {Container, Logo, Anchor, ButtonLink} from './Header.styles';
+import {Link} from 'react-router-dom';
 
 export default function Header({ children, ...restProps }) {
   return (
@@ -16,5 +17,11 @@ Header.Logo = function HeaderLogo({ ...restProps }) {
 Header.ButtonLink = function HeaderButtonLnk({ children, ...restProps }) {
   return (
     <ButtonLink {...restProps}>{children}</ButtonLink>
+  );
+};
+
+Header.Anchor = function HeaderAnchor({ children, ...restProps }) {
+  return (
+    <Anchor {...restProps}>{children}</Anchor>
   );
 };
