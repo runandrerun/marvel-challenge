@@ -24,6 +24,12 @@ export const Logo = styled.img`
   width: 50px;
   height: 50px;
   margin-right: 40px;
+  transform: rotate(0deg);
+  transition: all 1s ease-in;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
 
   @media (min-width: 1449px) {
     width: 55px;
@@ -35,8 +41,9 @@ export const Anchor = styled.a`
   font-size: 1.5rem;
   font-weight: 500;
   color: white;
+  margin-right: 1rem;
   position: relative;
-  border: none!important;
+  text-decoration: none;
   &:after {
     position: absolute;
     left: 50%;
@@ -45,12 +52,17 @@ export const Anchor = styled.a`
     background: white;
     transition: all 0.5s ease-in;
     width: 0;
-    bottom: 0;
+    bottom: -1px;
   }
   &:hover:after {
     width: 100%;
     left: 0;
   }
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const ButtonLink = styled(ReactRouterLink)`
@@ -67,7 +79,7 @@ export const ButtonLink = styled(ReactRouterLink)`
     background: white;
     transition: all 0.5s ease-in;
     width: 0;
-    bottom: 0;
+    bottom: -1px;
   }
   &:hover:after {
     width: 100%;
