@@ -3,7 +3,8 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: flex;
   margin: 0 56px;
-  height: 64px;
+  margin-top: 10px;
+  height: 80px;
   padding: 18px 0;
   justify-content: space-between;
   align-items: center;
@@ -19,13 +20,13 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   filter: brightness(0) invert(1);
-  width: 108px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   margin-right: 40px;
 
   @media (min-width: 1449px) {
-    width: 167px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
   }
 `;
 
