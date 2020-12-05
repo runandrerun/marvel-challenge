@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Container} from './GifFrame.styles';
 import {GifCard} from '../../components';
+import {GifsContext} from '../../context';
 
-export default function GifFrame({ gifs }) {
+export default function GifFrame() {
+  const { gifList } = useContext(GifsContext);
   return (
     <Container>
       {
-        gifs.map(({ id, bitly_gif_url, bitly_url, slug, title, url, rating, images, embed_url}) => {
+        gifList.map(({ id, bitly_gif_url, bitly_url, slug, title, url, rating, images, embed_url}) => {
           return (
           <GifCard key={id + slug}>
             <GifCard.Image
