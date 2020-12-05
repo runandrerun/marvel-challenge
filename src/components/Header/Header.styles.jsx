@@ -38,7 +38,7 @@ export const Logo = styled.img`
 `;
 
 export const Anchor = styled.a`
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   color: white;
   margin-right: 1rem;
@@ -66,7 +66,7 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const ButtonLink = styled(ReactRouterLink)`
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   color: white;
   position: relative;
