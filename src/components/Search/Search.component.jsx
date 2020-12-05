@@ -1,6 +1,7 @@
 import React, { useState, useContext, createContext } from 'react';
 import {GifsContext} from '../../context';
-import {Container, Input} from './Search.styles';
+import {Container, Input, Button} from './Search.styles';
+import {searchGiphy} from '../../adapters';
 
 const SearchContext = createContext();
 
@@ -21,12 +22,25 @@ Search.Input = function SearchInput({ ...restProps }) {
   };
   const onSubmit = event => {
     event.preventDefault();
-  }
+    searchGiphy()
+    .then(data => {
+      setGifList(data)
+    });
+  };
   return (
     <Input
       {...restProps}
       value={searchTerm}
       onChange={handleChange}
+      onSubmit={onSubmit}
     />
+  );
+};
+
+Search.Button = function SearchButton({ children, ...restProps }) {
+  return (
+    <Button {...restProps}>
+      {children}
+    </Button>
   );
 };
