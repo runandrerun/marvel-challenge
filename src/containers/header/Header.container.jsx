@@ -11,9 +11,9 @@ export default function HeaderContainer() {
         alt={"Pawprint"}
       />
       <Header.ButtonsContainer>
-        <Header.ButtonLink to={ROUTES.HOME}>Home</Header.ButtonLink>
+        <Header.ButtonLink to={ROUTES.GITHOME}>Home</Header.ButtonLink>
         <Header.Anchor href={ROUTES.GITHUB} rel="noopener noreferrer">Github Repo</Header.Anchor>
-        <Header.ButtonLink to={ROUTES.ABOUT}>About me</Header.ButtonLink>
+        <Header.ButtonLink to={ROUTES.GITABOUT}>About me</Header.ButtonLink>
       </Header.ButtonsContainer>
     </Header>
   );
