@@ -6,7 +6,7 @@ export const Card = styled.div`
   height: auto;
   margin: 5px 5px;
 
-  &:nth-of-type(4n+1) {
+  /* &:nth-of-type(4n+1) {
     width: 250px;
   }
 
@@ -18,7 +18,7 @@ export const Card = styled.div`
   }
   &:nth-of-type(4n+1):nth-of-type(4n+4) {
     width: 380px;
-  }
+  } */
 
   @media (max-width: 1000px) {
     max-width: 400px;

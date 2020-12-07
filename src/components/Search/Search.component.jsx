@@ -1,9 +1,7 @@
 import React, { useState, useContext, createContext } from 'react';
-import {GifsContext} from '../../context';
+import {GifsContext, SearchContext} from '../../context';
 import {Container, FormWrap, Input, Button} from './Search.styles';
 import {searchGiphy} from '../../adapters';
-
-const SearchContext = createContext();
 
 export default function Search({ children, ...restProps }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,8 +13,14 @@ export default function Search({ children, ...restProps }) {
 };
 
 Search.FormWrap = function SearchFormWrap({ children, ...restProps}) {
+  const { searchTerm } = useContext(SearchContext);
+  const { setGifList } = useContext(GifsContext);
   const onSubmit = event => {
     event.preventDefault();
+    searchGiphy(searchTerm)
+    .then(data => {
+      setGifList(data)
+    });
   };
   return (
       <FormWrap onSubmit={onSubmit} {...restProps}>{children}</FormWrap>
@@ -25,23 +29,14 @@ Search.FormWrap = function SearchFormWrap({ children, ...restProps}) {
 
 Search.Input = function SearchInput({ ...restProps }) {
   const { searchTerm, setSearchTerm } = useContext(SearchContext);
-  const { setGifList } = useContext(GifsContext);
   const handleChange = event => {
     setSearchTerm(event.target.value);
-  };
-  const onSubmit = event => {
-    event.preventDefault();
-    searchGiphy()
-    .then(data => {
-      setGifList(data)
-    });
   };
   return (
     <Input
       {...restProps}
       value={searchTerm}
       onChange={handleChange}
-      onSubmit={onSubmit}
     />
   );
 };
