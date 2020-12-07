@@ -1,3 +1,3 @@
 export const HOME = '/';
-export const GITHUB = 'https://www.github.com/runandrerun';
+export const GITHUB = 'https://github.com/runandrerun/marvel-challenge';
 export const ABOUT = '/about';

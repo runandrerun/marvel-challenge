@@ -3,14 +3,6 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  height: 100%;
-  margin-top: 1.2rem;
-  flex-wrap: wrap;
-
-  @media (max-width: 100px) {
-    flex-direction: column;
-    align-items: center;
-  }
 `;
 
 export const FormWrap = styled.form`
@@ -18,6 +10,7 @@ export const FormWrap = styled.form`
   justify-content: center;
   height: 100%;
   margin-top: 1.2rem;
+  width: 100%;
   flex-wrap: wrap;
 
   @media (max-width: 100px) {
@@ -27,12 +20,17 @@ export const FormWrap = styled.form`
 `;
 
 export const Input = styled.input`
+  /* flex-grow: 1; */
   max-width: 450px;
-  width: 90%;
+  width: 100%;
   border: 0;
   padding: .6rem;
   height: 50px;
   box-sizing: border-box;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
 `;
 
 export const Button = styled.button`
@@ -67,7 +65,6 @@ export const Button = styled.button`
     height: 50px;
     font-size: 1rem;
     margin-top: 20px;
-    margin-bottom: 20px;
     font-weight: bold;
   }
 `;

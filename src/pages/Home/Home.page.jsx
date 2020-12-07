@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {GifFrame, HeaderContainer, SearchContainer} from '../../containers';
+import {Loader} from '../../components';
 import {HomeSection} from './Home.styles';
 import {GifsContext} from '../../context';
 import {fetchTrending} from '../../adapters';
@@ -17,7 +18,11 @@ export default function Home() {
       <HomeSection id="home">
         <HeaderContainer />
         <SearchContainer />
-        <GifFrame />
+        {
+          gifList.length > 0 ?
+          <GifFrame /> :
+          <Loader />
+        }
       </HomeSection>
     </GifsContext.Provider>
   );
