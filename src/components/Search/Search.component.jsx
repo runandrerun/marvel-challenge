@@ -1,6 +1,6 @@
 import React, { useState, useContext, createContext } from 'react';
 import {GifsContext} from '../../context';
-import {Container, Input, Button} from './Search.styles';
+import {Container, FormWrap, Input, Button} from './Search.styles';
 import {searchGiphy} from '../../adapters';
 
 const SearchContext = createContext();
@@ -11,6 +11,15 @@ export default function Search({ children, ...restProps }) {
     <SearchContext.Provider value={{ searchTerm, setSearchTerm }}>
       <Container {...restProps}>{children}</Container>
     </SearchContext.Provider>
+  );
+};
+
+Search.FormWrap = function SearchFormWrap({ children, ...restProps}) {
+  const onSubmit = event => {
+    event.preventDefault();
+  };
+  return (
+      <FormWrap onSubmit={onSubmit} {...restProps}>{children}</FormWrap>
   );
 };
 
