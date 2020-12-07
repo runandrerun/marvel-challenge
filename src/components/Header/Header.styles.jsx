@@ -41,7 +41,6 @@ export const Anchor = styled.a`
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  margin-right: 1rem;
   position: relative;
   text-decoration: none;
   &:after {
@@ -63,6 +62,10 @@ export const Anchor = styled.a`
 export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  &>:first-child, &>:nth-child(2) {
+    margin-right: 1rem;
+  }
+
 `;
 
 export const ButtonLink = styled(ReactRouterLink)`
