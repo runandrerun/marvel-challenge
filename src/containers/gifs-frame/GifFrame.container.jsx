@@ -6,7 +6,7 @@ import {GifsContext} from '../../context';
 export default function GifFrame() {
   const { gifList } = useContext(GifsContext);
   return (
-    <Container>
+    <Container id="gifs-container">
       {
         gifList.map(({ id, bitly_gif_url, bitly_url, slug, title, url, rating, images, embed_url}) => {
           return (
