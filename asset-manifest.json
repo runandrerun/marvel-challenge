@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/marvel-challenge/static/css/main.696dd741.chunk.css",
-    "main.js": "/marvel-challenge/static/js/main.febb64a0.chunk.js",
-    "main.js.map": "/marvel-challenge/static/js/main.febb64a0.chunk.js.map",
-    "runtime-main.js": "/marvel-challenge/static/js/runtime-main.6ed7ed3d.js",
-    "runtime-main.js.map": "/marvel-challenge/static/js/runtime-main.6ed7ed3d.js.map",
-    "static/js/2.95ceb032.chunk.js": "/marvel-challenge/static/js/2.95ceb032.chunk.js",
-    "static/js/2.95ceb032.chunk.js.map": "/marvel-challenge/static/js/2.95ceb032.chunk.js.map",
-    "static/js/3.f5478f2e.chunk.js": "/marvel-challenge/static/js/3.f5478f2e.chunk.js",
-    "static/js/3.f5478f2e.chunk.js.map": "/marvel-challenge/static/js/3.f5478f2e.chunk.js.map",
+    "main.js": "/marvel-challenge/static/js/main.4a2d6bfb.chunk.js",
+    "main.js.map": "/marvel-challenge/static/js/main.4a2d6bfb.chunk.js.map",
+    "runtime-main.js": "/marvel-challenge/static/js/runtime-main.498fc15a.js",
+    "runtime-main.js.map": "/marvel-challenge/static/js/runtime-main.498fc15a.js.map",
+    "static/js/2.06c63b62.chunk.js": "/marvel-challenge/static/js/2.06c63b62.chunk.js",
+    "static/js/2.06c63b62.chunk.js.map": "/marvel-challenge/static/js/2.06c63b62.chunk.js.map",
+    "static/js/3.8667b9e6.chunk.js": "/marvel-challenge/static/js/3.8667b9e6.chunk.js",
+    "static/js/3.8667b9e6.chunk.js.map": "/marvel-challenge/static/js/3.8667b9e6.chunk.js.map",
     "index.html": "/marvel-challenge/index.html",
     "static/css/main.696dd741.chunk.css.map": "/marvel-challenge/static/css/main.696dd741.chunk.css.map",
-    "static/js/2.95ceb032.chunk.js.LICENSE.txt": "/marvel-challenge/static/js/2.95ceb032.chunk.js.LICENSE.txt",
+    "static/js/2.06c63b62.chunk.js.LICENSE.txt": "/marvel-challenge/static/js/2.06c63b62.chunk.js.LICENSE.txt",
     "static/media/pawprint.b266c184.svg": "/marvel-challenge/static/media/pawprint.b266c184.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6ed7ed3d.js",
-    "static/js/2.95ceb032.chunk.js",
+    "static/js/runtime-main.498fc15a.js",
+    "static/js/2.06c63b62.chunk.js",
     "static/css/main.696dd741.chunk.css",
-    "static/js/main.febb64a0.chunk.js"
+    "static/js/main.4a2d6bfb.chunk.js"
   ]
 }
