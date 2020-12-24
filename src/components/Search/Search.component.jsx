@@ -1,7 +1,8 @@
-import React, { useState, useContext, createContext } from 'react';
+import React, { useState, useContext, useCallback, createContext } from 'react';
 import {GifsContext, SearchContext} from '../../context';
 import {Container, FormWrap, Input, Button} from './Search.styles';
 import {searchGiphy} from '../../adapters';
+import {debounce} from '../../helpers';
 
 export default function Search({ children, ...restProps }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -22,6 +23,7 @@ Search.FormWrap = function SearchFormWrap({ children, ...restProps}) {
       setGifList(data)
     });
   };
+  // const debounceSubmit = useCallback(debounce(onSubmit, 400), []);
   return (
       <FormWrap onSubmit={onSubmit} {...restProps}>{children}</FormWrap>
   );

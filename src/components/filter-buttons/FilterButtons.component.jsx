@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container} from '.FilterButtons.styles';
+import {Container} from './FilterButtons.styles';
 
 export default function FilterButtons({ children, ...restProps }) {
   return (
