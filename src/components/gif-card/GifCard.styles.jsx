@@ -2,7 +2,9 @@ import styled from 'styled-components/macro';
 
 export const Card = styled.div`
   flex: auto;
-  width: 220px;
+  max-width: 300px;
+  width: 100%;
+  /* width: 220px; */
   height: auto;
   margin: 5px 5px;
 
